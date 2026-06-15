@@ -219,9 +219,11 @@ body::before {
     0 2px 4px rgba(0,0,0,0.06);
 }
 
-/* فتح تدريجي للغطاء */
+/* فتح تدريجي للغطاء ثم يختفي */
 .envelope.open .envelope-flap {
   transform: rotateX(110deg) translateY(-8px);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease 0.5s;
 }
 
 /* Card الداخلي */
@@ -389,6 +391,18 @@ body::before {
     #7b3434 100%);
 }
 
+/* إخفاء الختم بعد الفتح */
+.envelope.open .wax-seal {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.4s;
+}
+
+/* إخفاء الشريط بعد الفتح */
+.envelope.open .envelope-ribbon {
+  opacity: 0;
+  transition: opacity 0.3s ease 0.3s;
+}
+
 /* Responsive للظرف */
 @media (max-width: 640px) {
   .envelope {
@@ -469,6 +483,16 @@ body::before {
 .icon-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 28px 60px rgba(27, 24, 21, 0.16);
+}
+
+/* WhatsApp button style */
+.icon-button#rsvpButton {
+  background: #25D366;
+  color: white;
+}
+
+.icon-button#rsvpButton:hover {
+  background: #20BD5A;
 }
 
 .floating-particles {
@@ -647,7 +671,7 @@ main {
 }
 
 .section-title {
-  font-family: 'Allura', cursive;
+font-family: 'Playfair Display', serif;
   font-size: 3rem;
   color: var(--soft-black);
   margin-bottom: 1rem;
@@ -660,6 +684,31 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 24px;
+}
+
+/* engagement details styles */
+.engagement-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.detail-icon {
+  font-size: 1.5rem;
+}
+
+.detail-text {
+  font-size: 1.1rem;
+  color: var(--soft-black);
+  font-weight: 500;
 }
 
 .primary-button,

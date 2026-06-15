@@ -1,99 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>دعوة زفاف Mustafa & Asmaa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cairo:wght@300;400;500;700&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Tajawal:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body data-page="invite">
-  <div class="loading-screen" id="loadingScreen">
-    <div class="loading-content">
-      <div class="loading-title">Mustafa & Asmaa</div>
-      <div class="loading-subtitle">دعوتكم لأجمل ليلة</div>
-      <div class="spinner"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دعوة زفاف Mustafa & Asmaa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&family=Cairo:wght@300;400;500;700&family=Dancing+Script:wght@600;700&family=Great+Vibes&family=Tajawal:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600;700&family=Cinzel:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="invite">
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-content">
+        <div class="loading-title">Mustafa & Asmaa</div>
+        <div class="loading-subtitle">دعوتكم لأجمل ليلة</div>
+        <div class="spinner"></div>
+      </div>
     </div>
-  </div>
 
-  <div class="floating-particles" aria-hidden="true"></div>
+    <div class="floating-particles" aria-hidden="true"></div>
 
-  <header class="topbar">
-    <button class="icon-button" id="musicToggle">تشغيل الموسيقى</button>
-    <button class="icon-button" id="shareButton">مشاركة الدعوة</button>
-    <button class="icon-button" id="calendarButton">حفظ التاريخ</button>
-    <button class="icon-button" id="rsvpButton">تأكيد الحضور</button>
-  </header>
+    <header class="topbar">
+      <button class="icon-button" id="musicToggle">تشغيل الموسيقى</button>
+      <button class="icon-button" id="shareButton">مشاركة الدعوة</button>
+      <button class="icon-button" id="calendarButton">حفظ التاريخ</button>
+      <button class="icon-button" id="rsvpButton">📱 تأكيد الحضور</button>
+    </header>
 
-  <main>
-    <section class="hero section-fade" id="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content glass-card">
-        <div class="hero-date" id="eventDateText">00 / 00 / 0000</div>
-        <div class="hero-names">
-          <h1 class="name-main">Mustafa</h1>
-          <div class="hero-ampersand">&</div>
-          <h1 class="name-main">Asmaa</h1>
+    <main>
+      <section class="hero section-fade" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content glass-card">
+          <div class="hero-date" id="eventDateText">00 / 00 / 0000</div>
+          <div class="hero-names">
+            <h1 class="name-main">Mustafa</h1>
+            <div class="hero-ampersand">&</div>
+            <h1 class="name-main">Asmaa</h1>
+          </div>
+          <div class="hero-welcome">
+            <p>بسم الله الرحمن الرحيم</p>
+            <p class="ayah">
+              ( وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
+              لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً )
+            </p>
+            <p>
+              يسرنا أن نشارككم أجمل لحظات العمر، ونتشرف بحضوركم ومشاركتكم فرحتنا
+              في ليلةٍ نسأل الله أن يملأها بالمحبة والسعادة والبركة، فوجودكم
+              بيننا يزيد فرحتنا جمالاً.
+            </p>
+          </div>
+          <div class="countdown-grid" id="countdown">
+            <div><span id="days">00</span><small>Days</small></div>
+            <div><span id="hours">00</span><small>Hours</small></div>
+            <div><span id="minutes">00</span><small>Minutes</small></div>
+            <div><span id="seconds">00</span><small>Seconds</small></div>
+          </div>
         </div>
-        <div class="hero-welcome">
-          <p>بسم الله الرحمن الرحيم</p>
-          <p class="ayah">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ﴾</p>
-          <p>يسرنا أن نشارككم أجمل لحظات العمر، ونتشرف بحضوركم ومشاركتكم فرحتنا في ليلةٍ نسأل الله أن يملأها بالمحبة والسعادة والبركة، فوجودكم بيننا يزيد فرحتنا جمالاً.</p>
+      </section>
+
+      <section class="section section-fade" id="locationSection">
+        <div class="glass-card card-large">
+          <div class="section-title">💍 ليلة الخطوبة</div>
+          <p>يسرنا دعوتكم لحفل خطوبة Mustafa & Asmaa</p>
+          <div class="engagement-details">
+            <div class="detail-item">
+              <span class="detail-icon">🕐</span>
+              <span class="detail-text" id="engagementTime"
+                >الساعة 8 مساءً</span
+              >
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <span class="detail-text">الجبل الأصفر - نادي منشية ناصر</span>
+            </div>
+          </div>
+          <div class="actions-row"></div>
         </div>
-        <div class="countdown-grid" id="countdown">
-          <div><span id="days">00</span><small>Days</small></div>
-          <div><span id="hours">00</span><small>Hours</small></div>
-          <div><span id="minutes">00</span><small>Minutes</small></div>
-          <div><span id="seconds">00</span><small>Seconds</small></div>
+      </section>
+
+      <section class="section section-fade" id="weddingLocationSection">
+        <div class="glass-card card-large">
+          <div class="section-title">📍 location</div>
+          <p>يشرفنا حضوركم ومشاركتكم فرحتنا في هذا اليوم المميز.</p>
+          <div class="actions-row">
+            <a class="primary-button" href="#mapSection" id="showMapButton"
+              >عرض الموقع</a
+            >
+            <a
+              class="secondary-button"
+              id="mapLinkButton"
+              target="_blank"
+              rel="noopener noreferrer"
+              >فتح Google Maps</a
+            >
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section section-fade" id="locationSection">
-      <div class="glass-card card-large">
-        <div class="section-title">📍 موقع الحفل</div>
-        <p>يشرفنا حضوركم ومشاركتكم فرحتنا في هذا اليوم المميز.</p>
-        <div class="actions-row">
-          <a class="primary-button" href="#mapSection" id="showMapButton">عرض الموقع</a>
-          <a class="secondary-button" id="mapLinkButton" target="_blank" rel="noopener noreferrer">فتح Google Maps</a>
+      <section class="section section-fade" id="mapSection">
+        <div class="glass-card map-card">
+          <iframe
+            id="mapEmbed"
+            src="https://www.google.com/maps/place/%D8%B3%D9%84%D9%8A%D9%85%D8%A7%D9%86+%D8%A7%D9%84%D8%AD%D9%84%D8%A8%D9%8A%D8%8C+%D8%A7%D9%84%D9%82%D9%84%D8%AC%D8%8C+%D9%85%D8%B1%D9%83%D8%B2+%D8%A7%D9%84%D8%AE%D8%A7%D9%86%D9%83%D8%A9%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D9%84%D9%8A%D9%88%D8%A8%D9%8A%D8%A9+6345684%E2%80%AD/@30.1934962,31.3702216,17z/data=!3m1!4b1!4m6!3m5!1s0x1458116e6931ff11:0xf17e2514c8980d5!8m2!3d30.1934962!4d31.3702216!16s%2Fg%2F11g633bh0l!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section section-fade" id="mapSection">
-      <div class="glass-card map-card">
-        <iframe id="mapEmbed" src="https://www.google.com/maps/embed?pb=" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-
-    <section class="section section-fade" id="invitationSection">
-      <div class="glass-card card-large">
-        <div class="section-title">Invitation</div>
-        <p>في ليلةٍ تتلألأ بالحب والفرح، نسعد بدعوتكم لتشاركونا أجمل لحظات حياتنا، حضوركم هو أجمل هدية، ووجودكم بيننا يزيد سعادتنا اكتمالاً.</p>
-        <p>نسأل الله أن يجمعنا وإياكم دائماً على الخير والمحبة، وأن تكون هذه الليلة ذكرى جميلة تبقى في القلوب.</p>
-      </div>
-    </section>
-
-    <section class="section section-fade" id="closingSection">
-      <div class="closing-card glass-card">
-        <div class="closing-names">
-          <h1>Mustafa</h1>
-          <div class="hero-ampersand">&</div>
-          <h1>Asmaa</h1>
+      <section class="section section-fade" id="invitationSection">
+        <div class="glass-card card-large">
+          <div class="section-title">Invitation</div>
+          <p>
+            في ليلةٍ يملؤها الفرح وتزهو بالحب، نتشرّف بدعوتكم لمشاركتنا أجمل
+            لحظات العمر. حضوركم بيننا هو أعظم هدية، ووجودكم يكتمل به فرحنا
+            وتُشرق به سعادتنا.
+          </p>
+          <hr>
+          <p>
+            نسأل الله أن يجمعنا وإياكم دائماً على الخير والمحبة، وأن تكون هذه
+            الليلة ذكرى جميلة تبقى في القلوب.
+          </p>
         </div>
-        <p class="closing-text">في انتظار حضوركم ومشاركتكم أجمل لحظات العمر ❤️</p>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <button class="back-to-top" id="backToTop">↑ أعلى الصفحة</button>
+      <section class="section section-fade" id="closingSection">
+        <div class="closing-card glass-card">
+          <div class="closing-names">
+            <h1>Mustafa</h1>
+            <div class="hero-ampersand">&</div>
+            <h1>Asmaa</h1>
+          </div>
+          <p class="closing-text">
+            في انتظار حضوركم ومشاركتكم أجمل لحظات العمر ❤️
+          </p>
+        </div>
+      </section>
+    </main>
 
-  <audio id="backgroundMusic" loop preload="auto">
-    <source src="https://assets.mixkit.co/music/preview/mixkit-romantic-piano-1325.mp3" type="audio/mpeg" />
-  </audio>
+    <button class="back-to-top" id="backToTop">↑ أعلى الصفحة</button>
 
-  <script src="script.js"></script>
-</body>
+    <audio id="backgroundMusic" loop preload="auto" playsinline>
+      <source src="1583051726_tk.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
 </html>
